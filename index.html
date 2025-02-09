@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interactive Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript  Tasks</h1>
+    <div class="menu">
+        <button onclick="showSection('atm')">ATM Withdrawal</button>
+        <button onclick="showSection('shopping')">Shopping Discount</button>
+        <button onclick="showSection('grading')">Student Grading</button>
+        <button onclick="showSection('traffic')">Traffic Light</button>
+        <button onclick="showSection('ticket')">Movie Ticket</button>
+        <button onclick="showSection('job')">Job Application</button>
+        <button onclick="showSection('coupon')">Coupon Redemption</button>
+        <button onclick="showSection('gym')">Gym Membership</button>
+        <button onclick="showSection('electricity')">Electricity Bill</button>
+        <button onclick="showSection('flight')">Flight Ticket</button>
+    </div>
+
+    <div id="atm" class="task-section">
+        <h2>ATM Withdrawal System</h2>
+        <label>Enter PIN:</label>
+        <input type="password" id="atmPin">
+        <label>Enter Amount:</label>
+        <input type="number" id="atmAmount">
+        <button onclick="atmWithdrawal(5000, 1234)">Withdraw</button>
+        <p id="atmResult"></p>
+    </div>
+
+    <div id="shopping" class="task-section">
+        <h2>Online Shopping Discount</h2>
+        <label>Enter Order Amount ($):</label>
+        <input type="number" id="orderAmount">
+        <button onclick="calculateFinalAmount()">Calculate</button>
+        <p id="shoppingResult"></p>
+    </div>
+
+    <div id="grading" class="task-section">
+        <h2>Student Grading System</h2>
+        <label>Enter Marks:</label>
+        <input type="number" id="marks">
+        <label>Attendance (%):</label>
+        <input type="number" id="attendance">
+        <button onclick="calculateGrade()">Get Grade</button>
+        <p id="gradeResult"></p>
+    </div>
+
+    <div id="traffic" class="task-section">
+        <h2>Smart Traffic Light System</h2>
+        <label>Traffic Density:</label>
+        <select id="trafficDensity">
+            <option value="Heavy">Heavy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Light">Light</option>
+        </select>
+        <button onclick="trafficLightControl()">Show Time</button>
+        <p id="trafficResult"></p>
+    </div>
+
+    <div id="ticket" class="task-section">
+        <h2>Movie Ticket Pricing</h2>
+        <label>Age:</label>
+        <input type="number" id="ticketAge">
+        <label>Show Time (24hr format):</label>
+        <input type="number" id="showTime">
+        <button onclick="calculateTicketPrice()">Get Price</button>
+        <p id="ticketResult"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
